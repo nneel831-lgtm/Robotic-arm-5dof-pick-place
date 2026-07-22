@@ -347,6 +347,7 @@ Responsible for
 
 # End Goal
 
+![End Goal](f1.png)
 The final pipeline performs
 
 ```
