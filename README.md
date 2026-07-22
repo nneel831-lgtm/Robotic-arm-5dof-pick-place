@@ -390,29 +390,8 @@ Trajectory Generation
 ↓
 
 Robot Execution
+
 ```
-
----
-
-# Technologies Used
-
-- ROS2 Humble
-- Ubuntu 22.04
-- MoveIt2
-- OMPL
-- RRTConnect
-- TRAC-IK
-- IKPy
-- RTABMap
-- Intel RealSense D435i
-- OpenCV
-- Python
-- C++
-- TF2
-- RViz2
-- ros2_control
-
----
 
 # Future Work
 
