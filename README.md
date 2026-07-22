@@ -87,53 +87,8 @@ The complete TF tree is generated through robot_state_publisher.
 
 # Coordinate Frames
 
-Main frames used:
+[View Coordinate Frames Documentation (PDF)](tf1.pdf)
 
-```
-base_link
-
-↓
-
-Shoulder
-
-↓
-
-Shoulder_R
-
-↓
-
-Elbow
-
-↓
-
-Wrist_P
-
-↓
-
-Wrist_R
-
-↓
-
-camera_link
-
-↓
-
-camera_color_frame
-```
-
-Bottle detections are converted from
-
-```
-camera_color_frame
-
-↓
-
-base_link
-```
-
-using TF2.
-
----
 
 # Object Localization
 
