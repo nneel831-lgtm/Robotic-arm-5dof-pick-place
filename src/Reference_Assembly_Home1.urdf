@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Reference_Assembly_Home1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00054420381837245 0.0289764153009481 0.00017209218011969"
+        rpy="0 0 0" />
+      <mass
+        value="0.74995511898166" />
+      <inertia
+        ixx="0.00300881122224017"
+        ixy="3.98409686242449E-06"
+        ixz="-7.04505730019344E-08"
+        iyy="0.00471570695756845"
+        iyz="-7.77591095594387E-07"
+        izz="0.00305676569031836" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Shoulder_R">
+    <inertial>
+      <origin
+        xyz="0.000403078883638784 0.00970799426762278 -0.00104712514433428"
+        rpy="0 0 0" />
+      <mass
+        value="0.154107089212603" />
+      <inertia
+        ixx="0.000188059857849138"
+        ixy="2.92431537638015E-07"
+        ixz="7.40368791297862E-07"
+        iyy="0.000299228678844809"
+        iyz="5.72855168293748E-06"
+        izz="0.000169291903518765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Shoulder_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Shoulder_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.09"
+      rpy="1.5708 0 0.04451" />
+    <parent
+      link="base_link" />
+    <child
+      link="Shoulder_R" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Shoulder">
+    <inertial>
+      <origin
+        xyz="-1.50315385138988E-10 0.099425017814332 6.34043390098688E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.39012103355625" />
+      <inertia
+        ixx="0.000670012389630492"
+        ixy="-1.22065933905391E-12"
+        ixz="-1.8740720330164E-11"
+        iyy="0.000559622743279562"
+        iyz="-2.23498950331072E-13"
+        izz="0.000363783180882448" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="continuous">
+    <origin
+      xyz="0 0.0512 0"
+      rpy="0 0 0.74764" />
+    <parent
+      link="Shoulder_R" />
+    <child
+      link="Shoulder" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Elbow">
+    <inertial>
+      <origin
+        xyz="8.9996654573099E-10 -0.145838707777668 -0.0010840468977736"
+        rpy="0 0 0" />
+      <mass
+        value="0.504313501291092" />
+      <inertia
+        ixx="0.000788977892701809"
+        ixy="-7.23431204927685E-12"
+        ixz="-8.52875918590831E-12"
+        iyy="0.0005097510290924"
+        iyz="-7.60818811865854E-06"
+        izz="0.000557806758049926" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Elbow.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Elbow.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="continuous">
+    <origin
+      xyz="0 0.19885 0"
+      rpy="0 0 1.5614" />
+    <parent
+      link="Shoulder" />
+    <child
+      link="Elbow" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Wrist_P">
+    <inertial>
+      <origin
+        xyz="-8.7567297857305E-10 0.0326437870615106 0.000177447738935823"
+        rpy="0 0 0" />
+      <mass
+        value="0.134810623383458" />
+      <inertia
+        ixx="0.000269760071149334"
+        ixy="7.68828751572437E-13"
+        ixz="1.08344347827906E-10"
+        iyy="0.000225232191153324"
+        iyz="7.80565817654164E-07"
+        izz="0.00012827786126679" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Wrist_P.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Wrist_P.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="continuous">
+    <origin
+      xyz="0 -0.2624 0"
+      rpy="0 0 2.3464" />
+    <parent
+      link="Elbow" />
+    <child
+      link="Wrist_P" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Wrist_R">
+    <inertial>
+      <origin
+        xyz="0.000217019929672241 -0.0212833018466597 0.0336590129687498"
+        rpy="0 0 0" />
+      <mass
+        value="0.157395440537729" />
+      <inertia
+        ixx="0.000185752802278826"
+        ixy="-7.42899500224946E-07"
+        ixz="-1.26125056106827E-07"
+        iyy="0.000183370353940714"
+        iyz="3.40221094527726E-05"
+        izz="0.000124152379177769" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Wrist_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Reference_Assembly_Home1/meshes/Wrist_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="continuous">
+    <origin
+      xyz="0 0.10399 0.01"
+      rpy="1.5708 1.418 3.1416" />
+    <parent
+      link="Wrist_P" />
+    <child
+      link="Wrist_R" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

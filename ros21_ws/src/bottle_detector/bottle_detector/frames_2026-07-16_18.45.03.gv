@@ -1,0 +1,13 @@
+digraph G {
+"base_link" -> "Shoulder_R"[label=" Broadcaster: default_authority\nAverage rate: 14.484\nBuffer length: 5.04\nMost recent transform: 1784207703.266383\nOldest transform: 1784207698.226363\n"];
+"world" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"Shoulder_R" -> "Shoulder"[label=" Broadcaster: default_authority\nAverage rate: 14.484\nBuffer length: 5.04\nMost recent transform: 1784207703.266383\nOldest transform: 1784207698.226363\n"];
+"Shoulder" -> "Elbow"[label=" Broadcaster: default_authority\nAverage rate: 14.484\nBuffer length: 5.04\nMost recent transform: 1784207703.266383\nOldest transform: 1784207698.226363\n"];
+"Elbow" -> "Wrist_R"[label=" Broadcaster: default_authority\nAverage rate: 14.484\nBuffer length: 5.04\nMost recent transform: 1784207703.266383\nOldest transform: 1784207698.226363\n"];
+"Wrist_R" -> "Wrist_P"[label=" Broadcaster: default_authority\nAverage rate: 14.484\nBuffer length: 5.04\nMost recent transform: 1784207703.266383\nOldest transform: 1784207698.226363\n"];
+"Wrist_R" -> "Camera"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1784207703.2718127"[ shape=plaintext ] ;
+}->"world";
+}

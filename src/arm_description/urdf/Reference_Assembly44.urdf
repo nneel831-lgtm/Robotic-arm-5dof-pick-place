@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Reference_Assembly44">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00054420381837245 -0.000172092180119688 0.0289764153009481"
+        rpy="0 0 0" />
+      <mass
+        value="0.74995511898166" />
+      <inertia
+        ixx="0.00300881122224017"
+        ixy="7.04505730019346E-08"
+        ixz="3.98409686242448E-06"
+        iyy="0.00305676569031836"
+        iyz="7.77591095594485E-07"
+        izz="0.00471570695756845" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 0.35" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Shoulder_R">
+    <inertial>
+      <origin
+        xyz="0.000403078883638784 0.00970799426762278 -0.00104712514433428"
+        rpy="0 0 0" />
+      <mass
+        value="0.154107089212603" />
+      <inertia
+        ixx="0.000188059857849138"
+        ixy="2.92431537638015E-07"
+        ixz="7.40368791297859E-07"
+        iyy="0.000299228678844809"
+        iyz="5.72855168293749E-06"
+        izz="0.000169291903518765" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Shoulder_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Shoulder_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.09"
+      rpy="1.5707963267949 0 0.0586972407572865" />
+    <parent
+      link="base_link" />
+    <child
+      link="Shoulder_R" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.0944"
+      upper="2.0944"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Shoulder">
+    <inertial>
+      <origin
+        xyz="-1.53478323106082E-09 0.0844250188331954 3.22156832380707E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.340539325104864" />
+      <inertia
+        ixx="0.000556762872289463"
+        ixy="4.07473819525691E-12"
+        ixz="8.54437238413582E-12"
+        iyy="0.000512047037475982"
+        iyz="5.25935355125329E-12"
+        izz="0.000269464543142404" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Shoulder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Shoulder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="revolute">
+    <origin
+      xyz="0 0.0511999999999999 0"
+      rpy="0 0 0.893580588759203" />
+    <parent
+      link="Shoulder_R" />
+    <child
+      link="Shoulder" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.5"
+      upper="0.7"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Elbow">
+    <inertial>
+      <origin
+        xyz="2.18340928670457E-09 -0.104152763907058 -0.00147790913644874"
+        rpy="0 0 0" />
+      <mass
+        value="0.369913477199193" />
+      <inertia
+        ixx="0.000448543441141068"
+        ixy="-1.33091212899539E-11"
+        ixz="4.35205538463655E-11"
+        iyy="0.000371699137777268"
+        iyz="-7.60819728246898E-06"
+        izz="0.000271309304104362" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Elbow.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Elbow.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="revolute">
+    <origin
+      xyz="0 0.16885 0"
+      rpy="0 0 1.54911502956067" />
+    <parent
+      link="Shoulder" />
+    <child
+      link="Elbow" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.5416"
+      upper="0.55"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wrist_R">
+    <inertial>
+      <origin
+        xyz="-0.0158612226698731 0.0445038516191795 0.000137996415897841"
+        rpy="0 0 0" />
+      <mass
+        value="0.173342751912655" />
+      <inertia
+        ixx="0.00028758990024656"
+        ixy="9.7200200727186E-07"
+        ixz="1.15473874947255E-10"
+        iyy="0.000282438297669058"
+        iyz="7.80579863100199E-07"
+        izz="0.000168320034211443" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Wrist_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Wrist_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J4"
+    type="revolute">
+    <origin
+      xyz="0 -0.1874 0"
+      rpy="0 0 1.983" />
+    <parent
+      link="Elbow" />
+    <child
+      link="Wrist_R" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.131"
+      upper="3.0543"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wrist_P">
+    <inertial>
+      <origin
+        xyz="0.000310689346636155 -0.0180061019798506 0.0149193001086836"
+        rpy="0 0 0" />
+      <mass
+        value="0.110477012892495" />
+      <inertia
+        ixx="0.000118444279287865"
+        ixy="-7.42899071361453E-07"
+        ixz="-9.87118985636998E-08"
+        iyy="0.00011372480104977"
+        iyz="3.40221106402442E-05"
+        izz="0.000120723878819873" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Wrist_P.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Wrist_P.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J5"
+    type="revolute">
+    <origin
+      xyz="0 0.11716 0.01"
+      rpy="-1.5708 1.5692 0" />
+    <parent
+      link="Wrist_R" />
+    <child
+      link="Wrist_P" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Gripper">
+    <inertial>
+      <origin
+        xyz="-0.028999998744641 0.040216829296616 0.0199817101036695"
+        rpy="0 0 0" />
+      <mass
+        value="0.0234587021381431" />
+      <inertia
+        ixx="3.47460384230843E-05"
+        ixy="-1.54803392439047E-13"
+        ixz="-3.47615457939314E-14"
+        iyy="1.70981131636221E-06"
+        iyz="1.38472450368426E-07"
+        izz="3.35817044614761E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J6"
+    type="revolute">
+    <origin
+      xyz="0 0 0.018905"
+      rpy="1.5641 0 1.5708" />
+    <parent
+      link="Wrist_P" />
+    <child
+      link="Gripper" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Camera">
+    <inertial>
+      <origin
+        xyz="0.000246315098365265 -6.05366355121983E-05 -0.0130483956964289"
+        rpy="0 0 0" />
+      <mass
+        value="0.0447531077608532" />
+      <inertia
+        ixx="3.94470378773003E-06"
+        ixy="-2.79120512245854E-09"
+        ixz="2.44349448629853E-07"
+        iyy="2.73619877127596E-05"
+        iyz="-1.16714597103348E-09"
+        izz="2.727742454869E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 3.14159" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.894117647058823 0.894117647058823 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 3.14159" />
+      <geometry>
+        <mesh
+          filename="package://arm_description/meshes/Camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J7"
+    type="fixed">
+    <origin
+      xyz="-0.0905287301159827 0.116422510562616 0"
+      rpy="1.56723445405752 1.57079631189374 2.87502839714336" />
+    <parent
+      link="Wrist_R" />
+    <child
+      link="Camera" />
+    <axis
+      xyz="0 0 0" />
+   </joint>
+</robot>

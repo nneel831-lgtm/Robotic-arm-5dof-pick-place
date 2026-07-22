@@ -1,0 +1,12 @@
+# Ultralytics ByteTrack tracker configuration.
+# Reference: https://github.com/ultralytics/ultralytics  (trackers/bytetrack.yaml)
+# Tuned slightly for a single, fast-moving rigid object (bottle) to reduce ID
+# switches and improve recovery after brief occlusion.
+
+tracker_type: bytetrack
+track_high_thresh: 0.5     # threshold for the first association
+track_low_thresh: 0.1      # threshold for the second association
+new_track_thresh: 0.5      # threshold to init a new track
+track_buffer: 60           # frames to keep a lost track before deletion (~2s @30fps)
+match_thresh: 0.8          # matching threshold for tracking
+fuse_score: true           # fuse confidence scores with IoU distances
