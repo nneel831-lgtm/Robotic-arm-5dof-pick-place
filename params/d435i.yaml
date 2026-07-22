@@ -1,0 +1,62 @@
+/**:
+  ros__parameters:
+
+    camera_name: camera
+    enable_device: true
+    initial_reset: true
+    reconnect_timeout: 6.0
+
+    enable_color: true
+    rgb_camera.color_profile: 640x480x30
+    rgb_camera.color_format: RGB8
+
+    enable_depth: true
+    depth_module.depth_profile: 640x480x30
+    depth_module.depth_format: Z16
+
+    depth_module.enable_auto_exposure: true
+    depth_module.exposure: 8500
+    depth_module.gain: 16
+
+    enable_infra: false
+    enable_infra1: false
+    enable_infra2: false
+
+    enable_gyro: true
+    enable_accel: true
+
+    gyro_fps: 200
+    accel_fps: 50
+
+    unite_imu_method: 2
+
+    enable_sync: true
+    sync_mode: 0
+
+    align_depth.enable: true
+
+    spatial_filter.enable: true
+    spatial_filter.magnitude: 2
+    spatial_filter.smooth_alpha: 0.5
+    spatial_filter.smooth_delta: 20
+
+    temporal_filter.enable: true
+    temporal_filter.smooth_alpha: 0.4
+    temporal_filter.smooth_delta: 20
+
+    hole_filling_filter.enable: true
+    hole_filling_filter.mode: 1
+
+    decimation_filter.enable: false
+    decimation_filter.filter_magnitude: 2
+
+    pointcloud.enable: true
+    base_frame_id: camera_link
+
+    publish_tf: true
+
+    enable_motion_correction: true
+
+    depth_module.emitter_enabled: 1
+    enable_color_rect: false
+    enable_depth_rect: false
