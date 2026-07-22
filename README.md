@@ -133,7 +133,32 @@ RRTConnect
 Trajectory execution is performed through the ROS2 JointTrajectoryController.
 
 ---
+## Bottle Search State
 
+During the searching phase, the robotic arm uses a PID-based visual servoing controller to align the camera view with the detected bottle.
+
+The system continuously processes the camera feedback and adjusts only Joint 1 (J1) rotation to scan the workspace and center the bottle in the camera frame.
+
+Workflow:
+
+Camera Feed
+     |
+     v
+Bottle Detection
+     |
+     v
+PID Controller
+     |
+     v
+J1 Rotation Adjustment
+     |
+     v
+Bottle Centered
+     |
+     v
+Transition to Approach State
+
+The PID controller provides smooth and stable J1 movement by reducing alignment error and preventing sudden oscillations during the search process.
 # SLAM
 
 RGB-D SLAM is performed using
