@@ -90,7 +90,7 @@ The complete TF tree is generated through robot_state_publisher.
 
 # Coordinate Frames
 
-[View Coordinate Frames Documentation (PDF)](tf1.pdf)
+<img src="f2.png" width="700"/>
 
 
 # Object Localization
