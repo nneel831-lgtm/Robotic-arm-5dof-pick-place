@@ -142,20 +142,15 @@ The system continuously processes the camera feedback and adjusts only Joint 1 (
 Workflow:
 
 Camera Feed
-     |
-     v
+|
 Bottle Detection
-     |
-     v
+|
 PID Controller
-     |
-     v
+|
 J1 Rotation Adjustment
-     |
-     v
+|
 Bottle Centered
-     |
-     v
+|
 Transition to Approach State
 
 The PID controller provides smooth and stable J1 movement by reducing alignment error and preventing sudden oscillations during the search process.
