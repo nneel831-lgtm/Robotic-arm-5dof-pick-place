@@ -142,7 +142,7 @@ The system continuously processes the camera feedback and adjusts only Joint 1 (
 Workflow:
 
 Camera Feed
-|
+  |
 Bottle Detection
 |
 PID Controller
@@ -329,21 +329,17 @@ Workflow:
 
 Joint State Publisher
         |
-        v
 Joint State Echo / Feedback
         |
-        v
 Hiwonder Servo Interface
         |
-        v
 Servo Position Commands
         |
-        v
 Real Robotic Arm Movement
 
 
 The Hiwonder control package acts as the hardware abstraction layer between ROS 2 joint commands and the physical servo motors.
-
+There are 2 Hiwonder control interface . For usb-microusb . For uart to usb ttl adapter
 Features:
 
 - ROS 2 based joint command handling
