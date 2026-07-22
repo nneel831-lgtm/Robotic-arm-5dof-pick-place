@@ -5,7 +5,10 @@
 This repository contains the complete software stack developed for a custom 5-DOF robotic arm capable of detecting and localizing objects using computer vision, transforming detections into the robot base frame, and performing inverse kinematics for manipulation.
 
 The project was developed entirely on **ROS2 Humble** and integrates perception, motion planning, inverse kinematics, robot simulation, and SLAM into a single workspace.
-
+<p align="center">
+<img src="rviz.png" width="450"/>
+<img src="rViz.png" width="450"/>
+</p>
 ---
 
 # Features
