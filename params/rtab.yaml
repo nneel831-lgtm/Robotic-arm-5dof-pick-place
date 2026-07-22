@@ -1,0 +1,63 @@
+rtabmap:
+  ros__parameters:
+
+    Kp/DetectorStrategy: 6
+    Kp/MaxFeatures: 200
+    Kp/NNStrategy: 1
+    Kp/IncrementalFlann: true
+
+    Vis/FeatureType: 6
+    Vis/MaxFeatures: 200
+    Vis/MaxDepth: 7.0
+    Vis/MinDepth: 0.3
+    Vis/MinInliers: 5
+    Vis/InlierDistance: 0.2
+    Vis/ReprojError: 3.0
+    Vis/EstimationType: 1
+    Vis/CorType: 1
+    Vis/PnPFlags: 0
+    Vis/PnPRefineIterations: 1
+
+    Odom/Strategy: 0
+    Odom/GuessMotion: true
+    Odom/GuessSmoothingDelay: 0.06
+    Odom/FilteringStrategy: 2
+    Odom/ResetCountdown: 9
+    Odom/MinInliers: 3
+    Odom/MaxTranslation: 1.5
+    Odom/MaxRotation: 4.5
+    Odom/Holonomic: true
+    Odom/AlignWithGround: false
+    Odom/ImageDecimation: 1
+    Odom/FillInfoData: false
+
+    OdomF2M/MaxSize: 1000
+    OdomF2M/MaxNewFeatures: 100
+    OdomF2M/BundleAdjustment: 0
+
+    Imu/GyroNoise: 0.005
+    Imu/AccNoise: 0.01
+    Imu/GyroWalk: 0.00001
+    Imu/AccWalk: 0.0001
+
+    Mem/IncrementalMemory: true
+    Mem/STMSize: 5
+    Mem/NotLinkedNodesKept: false
+    Mem/ImageKept: false
+    Mem/BinDataKept: false
+    Mem/RawDescriptorsKept: false
+
+    Rtabmap/DetectionRate: 0.0
+    Rtabmap/TimeThr: 100
+    Rtabmap/CreateIntermediateNodes: false
+
+    RGBD/LinearUpdate: 0.5
+    RGBD/AngularUpdate: 0.3
+    RGBD/OptimizeFromGraphEnd: false
+    RGBD/ProximityBySpace: false
+    RGBD/LoopClosureReextractFeatures: false
+    RGBD/NewMapOdomChangeDistance: 0
+
+    Optimizer/Strategy: 1
+    Optimizer/Iterations: 1
+    Optimizer/GravitySigma: 0.3
